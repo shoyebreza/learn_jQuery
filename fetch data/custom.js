@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$('#fetch').click(function(){
+		$.ajax({
+			type:"get",
+			url:"file:///C:/Users/user%20pc/Desktop/learn%20jQuery/7.fetch%20data/data.html",
+			dataType:"html",
+			success:function(data){
+				$("#targetDiv").html(data);
+				alert(data);
+			}
+		});
+	});
+});

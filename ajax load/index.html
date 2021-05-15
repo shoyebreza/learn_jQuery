@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery load</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+		<div id="load" class="text-center">
+			<h3>jquery change this text</h3>
+			
+		</div>
+<button class="button btn-info">Fetch</button>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("#load").load("demo.txt");
+				});
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Determining your browser</title>
+	<script language=”javascript”>
+		var versionBegin, 
+		versionEndfunction checkBrowser()
+		{
+			if(navigator.appName == “Netscape”)
+			 {
+			 	if(navigator.userAgent.indexOf(“Firefox”) > 0) 
+			 		{
+			 			versionBegin = navigator.userAgent.indexOf(“Firefox”) + “Firefox”.length + 1;
+			 			versionEnd = navigator.userAgent.length;document.getElementById(“targetDiv”).innerHTML = “You have Firefox “ + navigator.userAgent.substring(versionBegin, versionEnd);
+			 			 }
+			 			}
+			 			if (navigator.appName == “Microsoft Internet Explorer”) {versionBegin = navigator.userAgent.indexOf(“MSIE “) + “MSIE “.length;
+			 				if(navigator.userAgent.indexOf(“;”, versionBegin) > 0) {versionEnd = navigator.userAgent.indexOf(“;”, versionBegin);
+			 				} else {versionEnd = navigator.userAgent.indexOf(“)”, versionBegin) + 2;
+}document.getElementById(“targetDiv”).innerHTML = “You have Internet Explorer “ + navigator.userAgent.substring(versionBegin, versionEnd);
+			 			}
+			 		}
+			 	</script>
+			 </head>
+			 <body onload=”checkBrowser()”>
+			 	<h1>Determining your browser</h1>
+			 	<div ID=”targetDiv”></div>
+			 </body>
+			 </html>
